@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaozu.dao.FlightMapper">
+    <select id="test" resultType="com.xiaozu.entity.Flight">
+        select * from flights where FlightNumber=#{FlightNumber} and ItinerarDate=#{ItinerarDate}
+    </select>
+    <select id="selectByStartAndEnd" resultType="com.xiaozu.entity.Flight">
+        select  * from  flights where FromCity=#{Start} and ToCity=#{End}
+    </select>
+    <select id="selectAll" resultType="com.xiaozu.entity.Flight">
+        select  * from  flights
+    </select>
+    <select id="selectByCity" resultType="com.xiaozu.entity.Flight">
+        select * from flights where FromCity=#{city} or ToCity=#{city}
+    </select>
+    <select id="selectByNoAndDate" resultType="com.xiaozu.entity.Flight">
+        select * from flights where FlightNumber=#{flightNo} and ItinerarDate=#{date}
+    </select>
+    <select id="selectByDate" resultType="com.xiaozu.entity.Flight">
+        select * from flights where ItinerarDate=#{date}
+    </select>
+</mapper>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据可视化demo</title>
+    <link href="../styles/common.css" rel="stylesheet">
+    <link href="../styles/bootstrap.min.css" rel="stylesheet">
+    <link href="../styles/bootstrap-table.css" rel="stylesheet">
+    <link href="../styles/pagination.css" rel="stylesheet">
+    <script src="../scripts/Plugin/jquery-3.3.1.min.js"></script>
+    <script src="../scripts/Plugin/echarts.min.js"></script>
+    <script src="../scripts/Plugin/jquery.pagination.min.js"></script>
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/chronic.js"></script>
+</head>
+<body>
+<!--顶部-->
+<header class="header left">
+    <div class="left nav">
+        <ul>
+            <li class="nav_active"><i class="nav_1"></i><a href="index.html">采集概况</a> </li>
+            <li><i class="nav_2"></i><a href="quota.html">航线模块</a> </li>
+            <li><i class="nav_3"></i><a href="trend.html">趋势分析</a> </li>
+            <li><i class="nav_4"></i><a href="chronic.html">航空公司模块</a> </li>
+        </ul>
+    </div>
+    <div class="header_center left" style="position:relative">
+        <h2><strong>机票分析综合数据平台</strong></h2>
+        <p class="color_font"><small>Comprehensive data platform for air ticket analysis</small></p>
+    </div>
+    <div class="right nav text_right">
+        <ul>
+
+        </ul>
+    </div>
+
+</header>
+<!--内容部分-->
+<div class="con left" style="width: 98%;margin-left: 1%;margin-bottom: 25px;">
+    <div class="div_any_child" style="height:400px;width: 1500px">
+        <div class="div_any_title"><img src="../images/title_7.png">总航班数对比</div>
+        <p id="histogramChart4" class="p_chart"></p>
+    </div>
+    <div class="div_any_child" style="height:400px;width: 1500px">
+        <div class="div_any_title"><img src="../images/title_7.png">准点率对比</div>
+        <p id="histogramChart3" class="p_chart"></p>
+    </div>
+
+    <div class="div_any_child">
+        <div class="div_any_title"><img src="../images/title_7.png">负责航线</div>
+        <input type="text" placeholder="航空公司" style="width: 180px;height: 28px;border-radius: 3px;text-indent: 1em;border: 1px solid#4b8df8;color: #fff;" /><button class="btn btn-primary btn-sm" style="margin-left:20px"><span class="glyphicon glyphicon-search"></span>查询</button>
+
+        <div class="table_p" style="height: 96%;margin-top: 20px;">
+              <table>
+                  <thead><tr>
+                      <th>始发地</th>
+                      <th>目的地</th>
+                      <th>航班号</th>
+                      <th>操作</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr><td>上海</td><td>北京</td><td> 1</td><td><button class="btn btn-primary btn-sm">查看</button></td></tr>
+                  <tr><td>上海</td><td>北京</td><td> 1</td><td><button class="btn btn-primary btn-sm">查看</button></td></tr>
+                  <tr><td>西安</td><td>北京</td><td> 1</td><td><button class="btn btn-primary btn-sm">查看</button></td></tr>
+                  <tr><td>西安</td><td>上海</td><td> 1</td><td><button class="btn btn-primary btn-sm">查看</button></td></tr>
+                  <tr><td>西安</td><td>广州</td><td> 1</td><td><button class="btn btn-primary btn-sm">查看</button></td></tr>
+                  <tr><td>西安</td><td>银川</td><td> 1</td><td><button class="btn btn-primary btn-sm">查看</button></td></tr>
+                  <tr><td>西安</td><td>杭州</td><td> 1</td><td><button class="btn btn-primary btn-sm">查看</button></td></tr>
+                  <tr><td>西安</td><td>乌鲁木齐</td><td> 1</td><td><button class="btn btn-primary btn-sm">查看</button></td></tr>
+                  <tr><td>西安</td><td>榆林</td><td> 1</td><td><button class="btn btn-primary btn-sm">查看</button></td></tr>
+                  <tr><td>北京</td><td>广州</td><td> 1</td><td><button class="btn btn-primary btn-sm">查看</button></td></tr>
+                  </tbody>
+              </table>
+          </div>
+          <div class="box">
+              <div id="pagination" class="page fl"></div>
+          </div>
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>
